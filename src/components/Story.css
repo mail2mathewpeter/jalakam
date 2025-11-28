@@ -1,0 +1,115 @@
+.story {
+    background: var(--bg-white);
+}
+
+.story-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.story-card {
+    background: var(--bg-cream);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all var(--transition-base);
+}
+
+.story-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.main-story {
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.main-story p {
+    margin-bottom: var(--spacing-md);
+}
+
+.main-story p:last-child {
+    margin-bottom: 0;
+}
+
+.main-story strong {
+    color: var(--primary-gold-dark);
+    font-weight: 600;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.story-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    display: inline-block;
+    animation: float 4s ease-in-out infinite;
+}
+
+.story-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.story-card p {
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.story-highlight {
+    position: relative;
+    background: var(--gradient-gold);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.story-highlight::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    animation: float 8s ease-in-out infinite;
+}
+
+.highlight-icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+    position: relative;
+    z-index: 1;
+}
+
+.highlight-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.6;
+    color: #1c1305;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 640px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-text {
+        font-size: 1.1rem;
+    }
+}
