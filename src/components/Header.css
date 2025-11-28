@@ -166,7 +166,7 @@
     .nav {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
         width: 280px;
         max-width: 85vw;
         height: 100vh;
@@ -175,14 +175,15 @@
         align-items: stretch;
         padding: 100px var(--spacing-lg) var(--spacing-lg);
         box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
-        transition: right 0.3s ease-in-out;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
         gap: 0;
         z-index: 999;
         overflow-y: auto;
     }
 
     .nav.open {
-        right: 0;
+        transform: translateX(0);
     }
 
     .nav a {
