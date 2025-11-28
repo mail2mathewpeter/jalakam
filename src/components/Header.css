@@ -176,14 +176,18 @@
         padding: 100px var(--spacing-lg) var(--spacing-lg);
         box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
         transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, visibility 0.3s;
         gap: 0;
         z-index: 999;
         overflow-y: auto;
+        visibility: hidden;
+        pointer-events: none;
     }
 
     .nav.open {
         transform: translateX(0);
+        visibility: visible;
+        pointer-events: auto;
     }
 
     .nav a {
